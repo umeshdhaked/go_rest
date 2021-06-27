@@ -1,5 +1,5 @@
 steps:
-  -name: 'bash'
+  - name: 'bash'
   entrypoint: 'sh'
   args: ['-c', 'cp build/gorest_app.yaml', 'gorest.yaml']
 
