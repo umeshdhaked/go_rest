@@ -1,3 +1,3 @@
-service: gogetrest
+service: default
 runtime: go115
 main: ./main.go
