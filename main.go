@@ -3,12 +3,13 @@ package main
 import (
 	_ "encoding/json"
 	"fmt"
-	"github.com/umeshdhaked/go_rest/apis/apitest"
-	"github.com/umeshdhaked/go_rest/apis/users"
 	"log"
 	_ "math/rand"
 	"net/http"
 	_ "strconv"
+
+	"github.com/umeshdhaked/go_rest/apis/apitest"
+	"github.com/umeshdhaked/go_rest/apis/users"
 )
 
 func main() {
@@ -21,7 +22,6 @@ func main() {
 }
 
 func handlers() {
-	http.HandleFunc("/", apitest.TestApi) // ANY METHOD
-	http.HandleFunc("/user/createUser",users.CreateUser)  //POST METHOD ONLY
+	http.HandleFunc("/", apitest.TestApi)                 // ANY METHOD
+	http.HandleFunc("/user/createUser", users.CreateUser) //POST METHOD ONLY
 }
-
