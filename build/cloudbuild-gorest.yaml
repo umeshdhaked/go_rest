@@ -1,9 +1,0 @@
-steps:
-  -name: 'bash'
-  entrypoint: 'sh'
-  args: ['-c', 'cp build/${_REST}-app.yaml', '${_REST}.yaml']
-
-  - name: 'gcr.io/cloud-builders/gcloud'
-  args: [ 'app', 'deploy', '${_REST}.yaml' ]
-
-timeout: "1800s"
