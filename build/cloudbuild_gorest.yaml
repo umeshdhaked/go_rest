@@ -1,9 +1,9 @@
 steps:
-  - name: 'bash'
+- name: 'bash'
   entrypoint: 'sh'
-  args: ['-c', 'cp build/gorest_app.yaml', 'gorest.yaml']
+  args: [ '-c', 'cp build/gorest_app.yaml', 'gorest.yaml' ]
 
-  - name: 'gcr.io/cloud-builders/gcloud'
+- name: 'gcr.io/cloud-builders/gcloud'
   args: [ 'app', 'deploy', 'gorest.yaml' ]
 
 timeout: "1800s"
